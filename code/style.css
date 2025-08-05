@@ -1,11 +1,9 @@
 body {
-  margin: 20px;
-  padding: 20px;
+  margin: 0;
   font-family: Arial, sans-serif;
   background-color: #fff8f0;
   color: #333;
 }
-
 
 header {
   background-color: #ffbb00;
@@ -13,48 +11,40 @@ header {
   text-align: center;
 }
 
-header h1 {
-  font-size: 30px;
-  padding: 10px;
+h1 {
   color: white;
+  margin-bottom: 10px;
 }
 
-
+/* Navbar – staplad på mobil */
 .grid-navbar {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-direction: column;
   gap: 10px;
-  margin-top: 20px;
-  padding: 10px;
-  justify-items: center;
+  align-items: center;
 }
 
 .grid-navbar a {
   background-color: #ffe082;
   padding: 10px 15px;
-  border-radius: 3px;
+  border-radius: 5px;
   text-decoration: none;
   color: black;
-
+  width: 80%;
+  text-align: center;
 }
 
 .grid-navbar a:hover {
   background-color: white;
   color: green;
-
 }
 
+/* Nyhetsrutorna – 1 kolumn som standard */
 .grid-parent {
   display: grid;
-  grid-template-columns: 200px 200px;
+  grid-template-columns: 1fr;
   gap: 10px;
   padding: 20px;
-  justify-content: center;
-}
-
-.grid-parent a:hover {
-  background-color: white;
-  color: green;
 }
 
 .grid-item {
@@ -64,109 +54,47 @@ header h1 {
   border-radius: 5px;
 }
 
-.grid-item a:hover {
-  background-color: white;
-  color: green;
-}
-
+/* Speciella rutor */
 .big-grid-item {
-  grid-column: span 2;
   background-color: #ffab91;
   font-weight: bold;
 }
 
-.big-grid-item a:hover {
-  background-color: white;
-  color: green;
-}
-
-
-.medium-grid-item {
-  grid-column: span 1;
-}
-
-.medium-grid-item a:hover {
-  background-color: white;
-  color: green;
-}
-
-
 .lonely-grid-item {
-  grid-column: span 2;
   background-color: #ffe0b2;
   font-style: italic;
 }
 
-.lonely-grid-item a:hover {
-  background-color: white;
-  color: green;
-}
-
-
-@media (min-width: 501px) and (max-width: 768px) {
+/* ===== Tablet (min 600px) ===== */
+@media (min-width: 600px) {
   .grid-navbar {
-    grid-template-columns: repeat(4, 1fr);
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   .grid-parent {
-    grid-template-columns: repeat(4, 211px);
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .medium-grid-item {
-    grid-column: span 2;
-  }
-
-  .big-grid-item {
-    grid-column: span 4;
-  }
-
+  .big-grid-item,
   .lonely-grid-item {
-    grid-column: span 4;
+    grid-column: span 2;
   }
 }
 
-@media (min-width: 769px) and (max-width: 1200px) {
-
-  .grid-navbar {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  .grid-parent {
-    grid-template-columns: repeat(4, 305px);
-  }
-
-  .medium-grid-item {
-    grid-column: span 2;
-  }
-
-  .big-grid-item {
-    grid-column: span 4;
-  }
-
-  .lonely-grid-item {
-    grid-column: span 4;
-  }
-}
-
-@media (min-width:1025px) {
-
-  .grid-navbar {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
+/* ===== Desktop (min 1000px) ===== */
+@media (min-width: 1000px) {
   .grid-parent {
     grid-template-columns: repeat(4, 1fr);
   }
 
-  .medium-grid-item {
-    grid-column: span 2;
-  }
-
-  .big-grid-item {
-    grid-column: span 4;
-  }
-
+  .big-grid-item,
   .lonely-grid-item {
     grid-column: span 4;
+  }
+
+  .medium-grid-item {
+    grid-column: span 2;
   }
 }
