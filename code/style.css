@@ -14,14 +14,19 @@ header {
 h1 {
   color: white;
   margin-bottom: 10px;
+  padding: 10px;
 }
 
-/* Navbar – staplad på mobil */
-.grid-navbar {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: center;
+
+@media (max-width: 500px) {
+  .grid-navbar {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 10px;
+    justify-items: center;
+  }
+
 }
 
 .grid-navbar a {
@@ -31,7 +36,7 @@ h1 {
   text-decoration: none;
   color: black;
   width: 80%;
-  text-align: center;
+
 }
 
 .grid-navbar a:hover {
@@ -39,7 +44,7 @@ h1 {
   color: green;
 }
 
-/* Nyhetsrutorna – 1 kolumn som standard */
+
 .grid-parent {
   display: grid;
   grid-template-columns: 1fr;
@@ -54,7 +59,7 @@ h1 {
   border-radius: 5px;
 }
 
-/* Speciella rutor */
+
 .big-grid-item {
   background-color: #ffab91;
   font-weight: bold;
@@ -65,7 +70,7 @@ h1 {
   font-style: italic;
 }
 
-/* ===== Tablet (min 600px) ===== */
+
 @media (min-width: 600px) {
   .grid-navbar {
     flex-direction: row;
@@ -83,7 +88,7 @@ h1 {
   }
 }
 
-/* ===== Desktop (min 1000px) ===== */
+
 @media (min-width: 1000px) {
   .grid-parent {
     grid-template-columns: repeat(4, 1fr);
