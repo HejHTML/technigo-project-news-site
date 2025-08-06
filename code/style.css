@@ -21,6 +21,11 @@ h1 {
   padding: 10px;
 }
 
+h1 a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .grid-navbar {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -71,6 +76,13 @@ h1 {
   padding: 20px;
   text-align: center;
   border-radius: 5px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.grid-item {
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .big-grid-item {
@@ -78,11 +90,15 @@ h1 {
   padding: 40px;
 }
 
+.big-grid-item a {
+  text-decoration: none;
+}
+
 .grid-item img {
   width: 100%;
   height: auto;
   max-width: 300px;
-  transition: width o.3s ease;
+  transition: width 0.3s ease;
 }
 
 .lonely-grid-item {
