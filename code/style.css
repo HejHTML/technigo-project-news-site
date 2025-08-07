@@ -1,5 +1,5 @@
 body {
-  margin: 0;
+  margin: 20;
   font-family: Arial, sans-serif;
   font-weight: bold;
   background-color: #fff8f0;
@@ -15,11 +15,13 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-shadow: #ff7700 5px 5px;
 }
 
 h1 {
   color: white;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+  margin-top: 10px;
   padding: 10px;
   font-size: 50px;
 }
@@ -41,12 +43,14 @@ h1 a {
 .grid-navbar a {
   box-sizing: border-box;
   display: flex;
-  width: 180px;
+  width: 130px;
   background-color: #ffe082;
   padding: 10px 15px;
-  border: 2px solid transparent;
+  border: 4px solid transparent;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
   border-radius: 9px;
   text-decoration: none;
+  font-size: 15px;
   color: #ff7700;
   text-align: center;
   align-items: center;
@@ -57,6 +61,8 @@ h1 a {
 .grid-navbar a:hover {
   background-color: #ffab91;
   color: white;
+  box-shadow: 0 0 8px 2px #ff7700;
+
 }
 
 .grid-parent {
@@ -68,9 +74,13 @@ h1 a {
 
 .grid-item {
   background-color: #ffccbc;
+  color: #333;
+  font-size: 20px;
   padding: 20px;
   text-align: center;
   border-radius: 5px;
+  box-shadow: #ff7700 5px 5px;
+
 }
 
 .grid-item {
@@ -80,6 +90,7 @@ h1 a {
   background-color: #f79d43cf;
   padding: 20px;
   text-align: center;
+  font-weight: normal;
   border-radius: 5px;
   text-decoration: none;
   color: inherit;
@@ -102,14 +113,28 @@ h1 a {
 
 .big-grid-item {
   background-color: #ffab91;
-  padding: 40px;
+  padding: 20px;
 }
 
 .big-grid-item {
   text-decoration: none;
-  margin-bottom: 10px;
+
+}
+
+.big-grid-title {
   font-size: 50px;
+  margin-top: 10px;
+  margin-bottom: 15px;
   color: rgb(86, 3, 163);
+}
+
+.big-grid-subtext {
+  font-size: 20px;
+  font-weight: normal;
+  color: #333;
+  text-align: center;
+  margin: 5px 0 10px 0;
+  line-height: 30px;
 }
 
 .big-grid-item img {
@@ -129,7 +154,7 @@ h1 a {
 .social-media {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 15px;
   margin-top: 10px;
 }
 
@@ -138,7 +163,7 @@ h1 a {
   height: 20px;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 667px) and (max-width:1024px) {
   .grid-parent {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -157,11 +182,10 @@ h1 a {
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
-    padding: 20px;
+    padding: 10px;
   }
 
   .grid-navbar a {
-    flex: 1 1 150px;
     width: 150px;
 
   }
@@ -171,19 +195,26 @@ h1 a {
   }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1025px) {
   .grid-parent {
     grid-template-columns: repeat(4, 1fr);
   }
 
+  .grid-navbar {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+
   .grid-navbar a {
-    flex: 1 1 150px;
-    width: 200px;
+    width: 160px;
 
   }
 
   .medium-grid-item {
-    grid-column: span 2;
+    grid-column: span 1;
   }
 
   .big-grid-item,
