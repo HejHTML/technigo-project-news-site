@@ -9,6 +9,8 @@ body {
 header {
   background-color: #ffbb00df;
   padding: 20px;
+  margin: 20px 20px 0 20px;
+  border-radius: 5px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -19,6 +21,7 @@ h1 {
   color: white;
   margin-bottom: 10px;
   padding: 10px;
+  font-size: 50px;
 }
 
 h1 a {
@@ -37,8 +40,8 @@ h1 a {
 
 .grid-navbar a {
   box-sizing: border-box;
-  display: inline-block;
-  width: 120px;
+  display: flex;
+  width: 180px;
   background-color: #ffe082;
   padding: 10px 15px;
   border: 2px solid transparent;
@@ -46,12 +49,14 @@ h1 a {
   text-decoration: none;
   color: #ff7700;
   text-align: center;
+  align-items: center;
+  justify-content: center;
   transition: all 0.3s ease;
 }
 
 .grid-navbar a:hover {
-  background-color: white;
-  color: black;
+  background-color: #ffab91;
+  color: white;
 }
 
 .grid-parent {
@@ -78,11 +83,21 @@ h1 a {
   border-radius: 5px;
   text-decoration: none;
   color: inherit;
-}
-
-.grid-item {
   width: 100%;
   box-sizing: border-box;
+  transition: background-color 0.3s ease;
+}
+
+.grid-item:hover {
+  background-color: #ffd49b;
+}
+
+.grid-item img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 2px;
+  margin-bottom: 10px;
 }
 
 .big-grid-item {
@@ -90,14 +105,18 @@ h1 a {
   padding: 40px;
 }
 
-.big-grid-item a {
+.big-grid-item {
   text-decoration: none;
+  margin-bottom: 10px;
+  font-size: 50px;
+  color: rgb(86, 3, 163);
 }
 
-.grid-item img {
+.big-grid-item img {
   width: 100%;
   height: auto;
-  max-width: 300px;
+  border-radius: 2px;
+  max-width: 500px;
   transition: width 0.3s ease;
 }
 
@@ -105,6 +124,18 @@ h1 a {
   background-color: #ffbb00df;
   font-style: italic;
   font-size: small;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.social-media img {
+  width: 20px;
+  height: 20px;
 }
 
 @media (min-width: 600px) {
@@ -135,7 +166,6 @@ h1 a {
 
   }
 
-
   .grid-item img {
     max-width: 400px;
   }
@@ -146,6 +176,11 @@ h1 a {
     grid-template-columns: repeat(4, 1fr);
   }
 
+  .grid-navbar a {
+    flex: 1 1 150px;
+    width: 200px;
+
+  }
 
   .medium-grid-item {
     grid-column: span 2;
@@ -157,6 +192,6 @@ h1 a {
   }
 
   .grid-item img {
-    max-width: 400px;
+    max-width: 600px;
   }
 }
