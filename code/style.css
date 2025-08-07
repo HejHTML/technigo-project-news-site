@@ -62,7 +62,6 @@ h1 a {
   background-color: #ffab91;
   color: white;
   box-shadow: 0 0 8px 2px #ff7700;
-
 }
 
 .grid-parent {
@@ -80,7 +79,6 @@ h1 a {
   text-align: center;
   border-radius: 5px;
   box-shadow: #ff7700 5px 5px;
-
 }
 
 .grid-item {
@@ -103,6 +101,10 @@ h1 a {
   background-color: #ffd49b;
 }
 
+.lonely-grid-item:hover {
+  background-color: #ffbb00df;
+}
+
 .grid-item img {
   width: 100%;
   max-width: 300px;
@@ -118,7 +120,6 @@ h1 a {
 
 .big-grid-item {
   text-decoration: none;
-
 }
 
 .big-grid-title {
@@ -149,6 +150,10 @@ h1 a {
   background-color: #ffbb00df;
   font-style: italic;
   font-size: small;
+}
+
+.grid-item:not(.lonely-grid-item):hover {
+  background-color: #ffd49b;
 }
 
 .social-media {
@@ -187,7 +192,6 @@ h1 a {
 
   .grid-navbar a {
     width: 150px;
-
   }
 
   .grid-item img {
@@ -210,7 +214,6 @@ h1 a {
 
   .grid-navbar a {
     width: 160px;
-
   }
 
   .medium-grid-item {
