@@ -4,7 +4,6 @@ https://lucky-beijinho-e620c2.netlify.app/
 
 Hi!
 
-Description of the assignment
 Includes the following elements:
 -header
 -a main news article
