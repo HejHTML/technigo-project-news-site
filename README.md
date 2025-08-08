@@ -2,7 +2,7 @@
 Deployed project:
 https://lucky-beijinho-e620c2.netlify.app/
 
-Replace this readme with your own information about the project. You can include things like:
+Hi!
 
 Description of the assignment
 Includes the following elements:
